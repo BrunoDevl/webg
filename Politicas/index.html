@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KyleProyect - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Agregar la etiqueta link para el ícono -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .policy-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .policy-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 110px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .policy-link a:hover {
+            background-color: #0056b3;
+        }
+        .expandable-box {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+            max-height: 100px; /* Altura inicial */
+        }
+        .expandable-box.expanded {
+            max-height: 500px; /* Altura máxima */
+        }
+        .mini-box-card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            margin-top: 10px; /* Espacio entre el botón y la card box */
+            position: relative; /* Asegura que el círculo de estado se posicione correctamente */
+        }
+        .mini-box-card .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .mini-box-card .status-circle {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #00ff00;
+            border: 1px solid #000;
+            box-shadow: 0 0 8px rgba(0, 255, 0, 0.7);
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+        .mini-box-card .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: center; /* Espacio entre el título y "Estado:" */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>KyleProyect</h1>
+        <p>Bienvenido a la web informativa de KyleProyect. Aquí encontrarás información sobre nuestros servicios y futuras actualizaciones. ¡Estamos emocionados de compartir nuestras novedades contigo!</p>
+        <div class="policy-link">
+            <a href="Politicas_De_Privacidad.html">Política de Privacidad</a>
+        </div>
+        <div class="expandable-box expanded">
+            <h2>Información sobre nuestros bots</h2>
+            <p>
+                <strong>AntiÁrabes Bot:</strong> Este bot te permite detectar y moderar contenido inapropiado en grupos de Telegram relacionados con temas árabes. Cuenta con herramientas de detección de lenguaje y filtrado avanzado para mantener la calidad del contenido en tus grupos.
+            </p>
+            <p>
+                <strong>Características:</strong> Más de 70 idiomas prohibidos, bases de datos sencillas y grupo de soporte para resolver cualquier duda.
+            </p>
+        </div>
+        <div class="mini-box-card">
+            <div class="status-circle"></div>
+            <img src="apple-touch-icon.png" alt="Logo Circular" class="logo">
+            <div>
+                <span class="title">ANTI AraBEs / #KyleProyect</span>
+                <p>Status: En Linea.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Función para cambiar el título de la página cuando cambia la visibilidad
+        function handleVisibilityChange() {
+            document.title = document.hidden ? 'Quieres Saber más ? 😏' : 'KyleProyect - Inicio';
+        }
+
+        // Agregar el evento visibilitychange al documento
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+    </script>
+</body>
+</html>
